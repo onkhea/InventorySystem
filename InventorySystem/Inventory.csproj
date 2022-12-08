@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD7C1E53-3EF8-4CF3-8960-A3EA10BE1D12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InventorySystem</RootNamespace>
+    <AssemblyName>InventorySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gold-golden-k-alphabet-letter-logo-icon-with-floral-design-for-business-and-company-vector %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperExtensions, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperExtensions.1.7.0\lib\net461\DapperExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v22.1" />
+    <Reference Include="DevExpress.Charts.v22.1.Core" />
+    <Reference Include="DevExpress.Dashboard.v22.1.Core" />
+    <Reference Include="DevExpress.Dashboard.v22.1.Win" />
+    <Reference Include="DevExpress.Data.Desktop.v22.1" />
+    <Reference Include="DevExpress.Drawing.v22.1" />
+    <Reference Include="DevExpress.Data.v22.1" />
+    <Reference Include="DevExpress.DataAccess.v22.1" />
+    <Reference Include="DevExpress.DataAccess.v22.1.UI" />
+    <Reference Include="DevExpress.Images.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v22.1.Core" />
+    <Reference Include="DevExpress.Mvvm.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.1.Core" />
+    <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.1.Drawing, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core" />
+    <Reference Include="DevExpress.Printing.v22.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.1.Core" />
+    <Reference Include="DevExpress.TreeMap.v22.1.Core" />
+    <Reference Include="DevExpress.Utils.v22.1" />
+    <Reference Include="DevExpress.Utils.v22.1.UI" />
+    <Reference Include="DevExpress.Xpo.v22.1" />
+    <Reference Include="DevExpress.XtraBars.v22.1" />
+    <Reference Include="DevExpress.XtraCharts.v22.1" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.UI" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.Wizard" />
+    <Reference Include="DevExpress.XtraEditors.v22.1" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Presets" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Win" />
+    <Reference Include="DevExpress.XtraGrid.v22.1" />
+    <Reference Include="DevExpress.XtraLayout.v22.1" />
+    <Reference Include="DevExpress.XtraMap.v22.1" />
+    <Reference Include="DevExpress.XtraNavBar.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v22.1" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1" />
+    <Reference Include="DevExpress.CodeParser.v22.1" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions" />
+    <Reference Include="DevExpress.XtraReports.v22.1" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.1" />
+    <Reference Include="DevExpress.XtraTreeList.v22.1" />
+    <Reference Include="DevExpress.XtraTreeMap.v22.1" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Java, Version=8.2.3.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.2.3\lib\net461\IKVM.Java.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Reflection, Version=8.2.3.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.2.3\lib\net461\IKVM.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.2.3.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.2.3\lib\net461\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.2.3.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.2.3\lib\net461\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="Lambda2Js.Signed, Version=3.1.4.0, Culture=neutral, PublicKeyToken=9ba16f7edfc48fe6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lambda2Js.Signed.3.1.4\lib\net40\Lambda2Js.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.JsonPatch, Version=6.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.JsonPatch.6.0.9\lib\net461\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Coordination, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Coordination.5.1.2\lib\net461\Nito.AsyncEx.Coordination.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Tasks.5.1.2\lib\net461\Nito.AsyncEx.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Collections.Deque, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Collections.Deque.1.1.1\lib\net461\Nito.Collections.Deque.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Disposables, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Disposables.2.2.1\lib\net461\Nito.Disposables.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.11.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Raven.Client, Version=5.4.4.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>..\packages\RavenDB.Client.5.4.4\lib\netstandard2.0\Raven.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Slapper, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slapper.AutoMapper.2.0.1\lib\net46\Slapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Sparrow, Version=5.4.4.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>..\packages\RavenDB.Client.5.4.4\lib\netstandard2.0\Sparrow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Cng.5.0.0\lib\net47\System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataPayment\PaymentListname.cs" />
+    <Compile Include="DataPayment\PaymentService.cs" />
+    <Compile Include="GUI\CheckStock\ControlStock\FrmAdd\FrmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\FrmAdd\FrmAdd.Designer.cs">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUser.Designer.cs">
+      <DependentUpon>XtraUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl1.Designer.cs">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl2.Designer.cs">
+      <DependentUpon>XtraUserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl3.Designer.cs">
+      <DependentUpon>XtraUserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ControlStock\XtraUserControl4.Designer.cs">
+      <DependentUpon>XtraUserControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\FollowStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\FollowStock.Designer.cs">
+      <DependentUpon>FollowStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\ServiceName.cs" />
+    <Compile Include="GUI\CheckStock\ServiceStock.cs" />
+    <Compile Include="GUI\CheckStock\StockBroken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\StockBroken.Designer.cs">
+      <DependentUpon>StockBroken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CheckStock\StockCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CheckStock\XtraForm1.Designer.cs">
+      <DependentUpon>StockCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\Waiting_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\Waiting_1.Designer.cs">
+      <DependentUpon>Waiting_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OutStock\frmOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OutStock\frmOut.Designer.cs">
+      <DependentUpon>frmOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\CheckPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\CheckPayment.Designer.cs">
+      <DependentUpon>CheckPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\FrmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\FrmPay.Designer.cs">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\PaymentAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\PaymentAll.Designer.cs">
+      <DependentUpon>PaymentAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\UpdatePaymentcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PaymentClient\UpdatePaymentcs.Designer.cs">
+      <DependentUpon>UpdatePaymentcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReturnStock\ReturnSk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReturnStock\ReturnSk.Designer.cs">
+      <DependentUpon>ReturnSk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Shared\SharedFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Shared\SharedFrm.Designer.cs">
+      <DependentUpon>SharedFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Shared\SplashScreen2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Shared\SplashScreen2.Designer.cs">
+      <DependentUpon>SplashScreen2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\location.Designer.cs">
+      <DependentUpon>location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceLocation\ServiceLocation.cs" />
+    <Compile Include="Service\Myhelper.cs" />
+    <Compile Include="GUI\ModelLogin.cs" />
+    <Compile Include="GUI\inventory\FormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\inventory\FormAdd.Designer.cs">
+      <DependentUpon>FormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\inventory\Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\inventory\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\InventoryModel.cs" />
+    <Compile Include="Service\InventoryService.cs" />
+    <Compile Include="GUI\OutStock\OutStored.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OutStock\OutStored.Designer.cs">
+      <DependentUpon>OutStored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReturnStock\ReturnStored.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReturnStock\ReturnStored.Designer.cs">
+      <DependentUpon>ReturnStored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyHelper\Logins.cs" />
+    <Compile Include="GUI\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PermissionFrm\CrudPermissionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PermissionFrm\CrudPermissionFrm.Designer.cs">
+      <DependentUpon>CrudPermissionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReportInventory\Payment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportInventory\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReportInventory\ReportInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportInventory\ReportInvoice.Designer.cs">
+      <DependentUpon>ReportInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReportInventory\SelectDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportInventory\SelectDate.Designer.cs">
+      <DependentUpon>SelectDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ManagerUser.cs" />
+    <Compile Include="Service\ReportService.cs" />
+    <Compile Include="Service\ReportServiceBase.cs" />
+    <Compile Include="Service\SharedData.cs" />
+    <Compile Include="Service\StoreName.cs" />
+    <Compile Include="GUI\UserManger\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UserManger\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyHelper\Myhelp.cs" />
+    <Compile Include="MyHelper\InvenClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\CheckStock\ControlStock\FrmAdd\FrmAdd.resx">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\ControlStock\XtraUser.resx">
+      <DependentUpon>XtraUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\ControlStock\XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\ControlStock\XtraUserControl2.resx">
+      <DependentUpon>XtraUserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\ControlStock\XtraUserControl3.resx">
+      <DependentUpon>XtraUserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\ControlStock\XtraUserControl4.resx">
+      <DependentUpon>XtraUserControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\FollowStock.resx">
+      <DependentUpon>FollowStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\StockBroken.resx">
+      <DependentUpon>StockBroken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CheckStock\XtraForm1.resx">
+      <DependentUpon>StockCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\inventory\FormAdd.resx">
+      <DependentUpon>FormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\inventory\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\Waiting_1.resx">
+      <DependentUpon>Waiting_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OutStock\frmOut.resx">
+      <DependentUpon>frmOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OutStock\OutStored.resx">
+      <DependentUpon>OutStored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PaymentClient\CheckPayment.resx">
+      <DependentUpon>CheckPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PaymentClient\FrmPay.resx">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PaymentClient\PaymentAll.resx">
+      <DependentUpon>PaymentAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PaymentClient\UpdatePaymentcs.resx">
+      <DependentUpon>UpdatePaymentcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReturnStock\ReturnSk.resx">
+      <DependentUpon>ReturnSk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReturnStock\ReturnStored.resx">
+      <DependentUpon>ReturnStored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PermissionFrm\CrudPermissionFrm.resx">
+      <DependentUpon>CrudPermissionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportInventory\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportInventory\ReportInvoice.resx">
+      <DependentUpon>ReportInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportInventory\SelectDate.resx">
+      <DependentUpon>SelectDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Shared\SharedFrm.resx">
+      <DependentUpon>SharedFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Shared\SplashScreen2.resx">
+      <DependentUpon>SplashScreen2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserManger\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\location.resx">
+      <DependentUpon>location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\InventorySystem.DataPayment.PaymentListname.datasource" />
+    <None Include="Properties\DataSources\InventorySystem.GUI.CheckStock.ServiceName.datasource" />
+    <None Include="Properties\DataSources\InventorySystem.GUI.inventory.InventoryModel.datasource" />
+    <None Include="Properties\DataSources\InventorySystem.GUI.UserManger.StoreName.datasource" />
+    <None Include="Properties\DataSources\InventorySystem.Location.location.datasource" />
+    <None Include="Properties\DataSources\InventorySystem.Service.SharedData.datasource" />
+    <None Include="Properties\DataSources\InventorySystem.ServiceLocation.ServiceLocation.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dashboards\dashboard1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Sales.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="gold-golden-k-alphabet-letter-logo-icon-with-floral-design-for-business-and-company-vector %281%29.ico" />
+    <Content Include="gold-golden-k-alphabet-letter-logo-icon-with-floral-design-for-business-and-company-vector.ico" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\Eye-512.jpg" />
+    <Content Include="Resources\test.jfif" />
+    <Content Include="Resources\777508-2001.png" />
+    <Content Include="Resources\777508-200.png" />
+    <None Include="Resources\777508-200-removebg-preview.png" />
+    <None Include="Resources\images-removebg-preview.png" />
+    <None Include="Resources\mobile-app-development-background_73903-295.jpg" />
+    <None Include="Resources\gold-golden-k-alphabet-letter-logo-icon-with-floral-design-for-business-and-company-vector %281%29.ico" />
+    <None Include="Resources\gold-golden-k-alphabet-letter-logo-icon-with-floral-design-for-business-and-company-vector.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
